@@ -9,10 +9,19 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `gallery`,
+        path: `${__dirname}/content/gallery/`,
+        fonts: [
+          {
+            family: 'Playfair Display',
+            variants: ['400', '500', '600', '700', '800', '900']
+          },
+        ],
       },
+
       __key: "images",
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 };
